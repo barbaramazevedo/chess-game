@@ -1,23 +1,20 @@
 package Chess;
 
+import Chess.pieces.King;
+import Chess.pieces.Rook;
 import boardgame.Board;
+import boardgame.Position;
 
 public class ChessMatch {
 
     private Board board;
-    private int turn;
-    private Color currentPlayer;
-    private boolean check;
-    private boolean checkMate;
-    private ChessPiece enPassantVulnerable;
-    private ChessPiece promoted;
-
 
     public ChessMatch() {
         board = new Board(8,8);
+        InitialSetup();
     }
 
-    public ChessPiece[][] pieces() {
+    public ChessPiece[][] getPieces() {
         ChessPiece[][] mat  = new ChessPiece[board.getRows()][board.getColumns()];
         for (int i=0; i < board.getRows(); i++ ) {
             for (int j=0; j < board.getColumns(); j++ ) { 
@@ -25,5 +22,10 @@ public class ChessMatch {
             }
         }
         return mat;
+    }
+
+    private void InitialSetup() {
+        board.PlacePiece(new Rook(board, Color.WHITE), new Position(2, 1));
+        board.PlacePiece(new King(board, Color.BLACK), new Position(0, 4));
     }
 }
