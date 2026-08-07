@@ -3,5 +3,13 @@
     "java.project.outputPath": "backend/bin",
     "java.project.referencedLibraries": [
         "backend/lib/**/*.jar"
+    ],
+    "java.jdt.ls.java.home": "/Users/i775514/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home",
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-26",
+            "path": "/Users/i775514/Library/Java/JavaVirtualMachines/openjdk-26/Contents/Home",
+            "default": true
+        }
     ]
 }
